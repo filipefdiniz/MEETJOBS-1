@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,500&display=swap');
+*{
+    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    font-family: Bebas Neue;
+}
+
+.pagina-inicial-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.banner {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    align-items: center;
+    background-color: #2F1854;
+    color: white;
+    width: 100%;
+}
+
+.banner p{
+    font-size: 45px;
+    text-align: justify;
+    width: 80%;
+    margin-top: 20px;
+
+}
+
+.btn-img {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 50px 0px 50px;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    
+}
+
+.left p{
+    font-size: 90px;
+    text-align: center;
+}
+
+.cadastrar {
+    font-family: Bebas Neue;
+    border: none;
+    width: 320px;
+    border-radius: 10px;
+    background: linear-gradient(180deg, #FFF 0%, #3F62D4 0.01%, #861AA0 100%);
+    font-size: 50px;
+    color: white;
+}
+
+.right img{
+    width: 450px;
+    margin: 35px;
+}
+
+
+.instrucoes{
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+}
+.instrucoes p{
+    font-size: 70px;
+}
+.instrucoes img{
+    margin: 20px;
+    width: 350px;
+}
+.inst-cards{
+    display: flex;
+    align-items: center;
+}
+.instrucoes-card{
+
+}
+.section1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+.title{
+    font-size: 50px;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin: 50px;
+    gap: 50px;
+   
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+}
+.card-texto{
+    position: absolute;
+    font-size: 30px;
+    color: white;
+
+}
+.card-img{
+    width: 200px;
+    height: 200px;
+    object-fit:cover;
+    filter:brightness(50%);
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-img:hover{
+    transform: scale(1.05);
+    transition: 0.5s;
+    
+}
+
+.comments{
+    display: flex;
+    width: 100%;
+    background-color: #2F1854;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px 0px;
+}
+
+.comments p{
+    color: white;
+    font-size: 40px;
+}
+
+.comment-card{
+    color: black;
+    height: 100px;
+    width: 200px;
+    border-radius: 8px;
+    background-color: rgb(216, 216, 216);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    padding: 20px;
+    box-shadow: 3px 3px 10px rgba(255, 255, 255, 0.5);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+    align-items: center;
+}
+
+.logo-header{
+    width: 120px;
+}
+
+.btn-header {
+    width: 150px;
+    background-color: #A36AFF;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+    height: 40px;
+}
+
+.ver-mais{
+    font-size: 30px;
+    width: 200px;
+    border: none;
+    border-radius: 8px;
+    background-color: #A36AFF;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.ver-mais:hover{
+    cursor: pointer;
+    background-color: #2F1854;
+    transition: 0.3s;
+}
+
+.banner2{
+    display: flex;
+    align-items: center;
+
+
+}
+.banner2-div{
+    margin: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 2px #A36AFF;
+    gap: 70px;
+    padding: 30px;
+    font-size: 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+/* ----------------------------------------------------
+  Rodapé */
+  .rodape {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    color: white;
+    width: 100%;
+    background-color: #2F1854;
+}
+
+.rod1 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 30%;
+    align-items: center;
+}
+
+.rod2 {
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+    text-align: center;
+}
+
+.rod2 p {
+    margin-bottom: 30px;
+}
+
+.rod2 p:hover {
+    color: #A36AFF;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.rod3 {
+    width: 30%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#social {
+    font-size: 30px;
+    margin: 10px;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
+
+#social:hover {
+    color: #A36AFF;
+    font-size: 40px;
+    transition: 0.5s;
+}
+
+#social:not(:hover) {
+    transition: 0.5s;
+}
+
+.contact {
+    margin-top: 20px;
+}
+
+.contact p {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .rodape {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .rod1,
+    .rod2,
+    .rod3 {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .btn-img{
+    grid-template-columns: 1fr;
+    padding-bottom: 30px;
+    }
+
+    .right img{
+        display: none;
+    }
+    .inst-cards{
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards{
+        grid-template-columns: repeat(2,1fr);
+       
+    }
+    .comments{
+        flex-direction: column;
+
+    }
+    .banner2-div{
+        flex-direction: column;
+        text-align: center;
+
+    }
+    .banner p{
+        text-align: center;
+    }
+
+}
