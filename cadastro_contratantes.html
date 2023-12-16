@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" class="style">
+    <link rel="shortcut icon" href=".\assets\logo.png" type="image/x-icon">
+    <title>Cadastro Contratante</title>
+</head>
+<body>
+    <div class="faixa"></div>
+    <div class="title-cadastro-freela">
+        <h3>CADASTRAR-SE COMO CONTRATANTE</h3>
+        <hr />
+    </div>
+    <div class="forms">
+        <div class="freela">
+            <form class="form-freela-1" onsubmit=criarContratante(); return false;>
+                <div class="form-freela-input">
+                <div class="form-freela">
+                <input type="text" placeholder="Nome completo" id="nome_completo" name="nome_completo" required>
+                <input type="email" placeholder="Email" id="email" name="email" required>
+                <input type="text" placeholder="Telefone" id="telefone" name="telefone" required>
+                <input type="text" placeholder="CPF | CNPJ" id="cpf_cnpj" name="cpf_cnpj" required>
+            </div>
+            <div class="form-freela">
+                <input type="date" placeholder="Data de nacimento" id="data_nascimento" name="data_nascimento" required>
+                <input type="password" placeholder="Senha" id="senha" name="senha" required>
+                <input type="date" placeholder="Dia de cadastro" id="criado_em" name="criado_em" required>
+                <input type="text" placeholder="CEP" id="cep" name="cep" required>
+            </div>
+        </div>
+                <button class="btn-cadastrar" onclick="window.location.href='login.html'" type="submit">FINALIZAR CADASTRO</button>
+            </form>
+        </div>
+
+        <script>
+            function criarContratante() {
+                // Obtenha os valores do formulário
+                const nomeCompleto = document.getElementById('nome_completo').value;
+                const email = document.getElementById('email').value;
+                const telefone = document.getElementById('telefone').value;
+                const cpfCnpj = document.getElementById('cpf_cnpj').value;
+                const dataNascimento = document.getElementById('data_nascimento').value;
+                const senha = document.getElementById('senha').value;
+                const criadoEm = document.getElementById('criado_em').value;
+                const cep = document.getElementById('cep').value;
+
+                const formData2 = {
+                    nomeCompleto,
+                    email,
+                    telefone,
+                    cpfCnpj,
+                    dataNascimento,
+                    senha,
+                    criadoEm,
+                    cep
+                };
+
+                // Salve os dados no localStorage
+                localStorage.setItem('formData2', JSON.stringify(formData2));
+
+                // Redirecione para a página de feed de vagas
+                alert('Cadastro realizado com sucesso!');
+            }
+        </script>
+</body>
+</html>

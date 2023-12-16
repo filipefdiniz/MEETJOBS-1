@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" class="style">
+    <title>Cadastro de vagas</title>
+</head>
+<body>
+    <div class="fundo-form-vagas">
+        <div class="form-vagas">
+            <a href="feed_freelancers.html"><button>Voltar</button></a>
+            <h3>CADASTRAR UMA VAGA</h3>
+            <form onsubmit="criarVaga(); return false;" class="form-vagas-form" id="form-vagas-form">
+                <label for="">Título da vaga:</label>
+                <input type="text" placeholder="Digite o titulo para a vaga" id="titulo">
+                <label for="">Descrição:</label>
+                <input type="text" placeholder="Digite uma descrição para a vaga" id="descricao">
+                <label for="">Valor médio da vaga:</label>
+                <input type="text" placeholder="Digite um intervalo de valores" id="valor">
+                <label for="">Competência da vaga:</label>
+                <input type="text" placeholder="Digite a Competência para a vaga" id="competencia">
+                <button type="submit">Postar vaga</button>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        function criarVaga() {
+            // Impede o envio padrão do formulário
+            const form = document.getElementById('form-vagas-form');
+            
+            // Coleta os valores do formulário
+            var title = document.getElementById('titulo').value;
+            var description = document.getElementById('descricao').value;
+            var salary = document.getElementById('valor').value;
+            var skills = document.getElementById('competencia').value;
+
+            // Cria um objeto com os dados do formulário
+            var jobData = {
+                title: title,
+                description: description,
+                salary: salary,
+                skills: skills
+            };
+
+            // Obtém os dados armazenados atualmente no localStorage (se houver)
+            var storedJobs = JSON.parse(localStorage.getItem('vagas')) || [];
+
+            // Adiciona os novos dados ao array existente
+            storedJobs.push(jobData);
+
+            // Salva os dados atualizados de volta no localStorage
+            localStorage.setItem('vagas', JSON.stringify(storedJobs));
+
+            // Limpa o formulário após o envio
+            form.reset();
+
+            // Adicione aqui qualquer outra lógica que você queira após o envio do formulário
+
+            // Exemplo: Exibir uma mensagem de sucesso
+            alert('Vaga cadastrada com sucesso!');
+            window.location.href = 'feed_vagas.html';
+        }
+    </script>
+        
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" class="style">
+    <link rel="shortcut icon" href=".\assets\logo.png" type="image/x-icon">
+    <title>Página de Login</title>
+</head>
+
+<body>
+    <div class="fundo-login">
+        <div class="card-login">
+            <div class="logo-login">
+                <a href="index.html"><img src=".\assets\logo.png" alt=""></a>
+                <h3>MEET JOBS</h3>
+            </div>
+            <form id="loginForm" class="form-login" onsubmit="realizarLogin(); return false;">
+                <div class="input-login">
+                    <input type="email" placeholder="EMAIL" id="login_email" name="email">
+                    <input type="password" placeholder="Digite sua senha" id="login_senha" name="senha">
+                </div>
+                <div class="btn-login-cadastro">
+                    <div>
+                        <button class="btn-login" type="submit">ENTRAR</button>
+                    </div>
+                    <div class="login-cadastro">
+                        <p>Não possui cadastro?</p>
+                        <a href="/escolha_cadastro.html"><button class="btn-cadastro"
+                                type="button">CADASTRE-SE</button></a>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        function getStoredData(key) {
+            return JSON.parse(localStorage.getItem(key)) || {};
+        }
+    
+        function realizarLogin() {
+            // Obtenha os valores do formulário de login
+            const loginEmail = document.getElementById('login_email').value;
+            const loginSenha = document.getElementById('login_senha').value;
+    
+            // Obtenha os dados armazenados no localStorage
+            const freelancers = getStoredData('freelancers');
+            const formData2 = getStoredData('formData2');
+    
+            // Verifique se os dados correspondem para autenticação
+            const freelancersFound = freelancers.find(freelancer => freelancer.email === loginEmail && freelancer.senha === loginSenha);
+    
+            if (freelancersFound) {
+                alert('Login bem-sucedido!');
+                window.location.href = '/feed_vagas.html';
+            } else if (formData2.email === loginEmail && formData2.senha === loginSenha) {
+                alert('Login bem-sucedido!');
+                window.location.href = '/feed_freelancers.html';
+            } else {
+                alert('Credenciais inválidas.');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

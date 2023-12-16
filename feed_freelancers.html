@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/script.js"></script>
+    <link rel="stylesheet" href="style.css" class="style">
+    <link rel="shortcut icon" href=".\assets\logo.png" type="image/x-icon">
+    <title>Feed de Freelancers</title>
+</head>
+
+<body>
+    <div class="faixa"></div>
+    <header>
+        <div class="header-feed-vagas">
+            <div class="titulo-header">
+                <a href="/index.html"><img src=".\assets\logo.png" alt=""></a>
+                <h4>FREELANCERS DISPONÍVEIS</h4>
+            </div>
+            <div class="perfil-icon" id="agora">
+                <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                    <circle cx="26" cy="26" r="24.5" fill="white" stroke="#2F1854" stroke-width="3" />
+                    <path
+                        d="M26.4126 24.7619C30.2889 24.7619 33.4285 21.6223 33.4285 17.746C33.4285 13.8698 30.2889 10.7302 26.4126 10.7302C22.5363 10.7302 19.3967 13.8698 19.3967 17.746C19.3967 21.6223 22.5363 24.7619 26.4126 24.7619ZM26.4126 28.2698C21.7295 28.2698 12.3809 30.6202 12.3809 35.2857V38.7937H40.4444V35.2857C40.4444 30.6202 31.0957 28.2698 26.4126 28.2698Z"
+                        fill="#2F1854" />
+                </svg>
+                <h3 class="agora">Contratante</h3>
+            </div>
+        </div>
+        <hr />
+        <a href="cadastro_vagas.html"><button id="btn-cadastro-vaga"class="falar-freela">CADASTRAR VAGA</button></a>
+    </header>
+
+    <div class="feed_vagas">
+        
+        <div class="filtro-vagas">
+            <h3 style="text-align: center;">Filtro</h3>
+            <div class="habilidades-filter">
+                <p class="filter-title">HABILIDADES</p>
+                <select name="habilidades" id="habilidades-filter">
+                    <option>Habilidades e Competências</option>
+                    <option value="Mecânica">Mecânica</option>
+                    <option value="Cozinha">Cozinha</option>
+                    <option value="Limpeza">Limpeza</option>
+                    <option value="Elétrica">Elétrica</option>
+                    <option value="Eventos">Eventos</option>
+                    <option value="Carpintaria">Carpintaria</option>
+                    <option value="Garçom">Garçom</option>
+                </select>
+            </div>
+            <div class="filter-localizacao">
+                <p class="filter-title">LOCALIZAÇÃO</p>
+                <input type="text" placeholder="Digite a cidade">
+            </div>
+            <div class="filter-valor">
+                <p class="filter-title">VALOR DE PROPOSTA</p>
+                <input type="text" placeholder="Digite o valor máx..">
+            </div>
+        </div>
+
+        <!-- CARD QUE VAI APARECER DE FORMA DINAMICA -->
+        <div class="feed-freelancers-container" id="lista-freelancers">
+            <div class="cards-freelas">
+                <div class="freela-info">
+                    <img  class="img-freela" src="https://img.freepik.com/fotos-gratis/homem-retrato-rindo_23-2148859448.jpg?size=626&ext=jpg&ga=GA1.1.1290207729.1680617905&semt=sph"  alt="">
+                    <div class="info">
+                        <div class="info-1">
+                            <p class="freela-name">Mario Ferreira</p>
+                            <p class="freela-idade">29 anos</p>
+                        </div>
+                        <div class="freela-habilidade">Mecânica</div>
+                    </div>
+                </div>
+                <div class="contato-aval">
+                    <button class="falar-freela">FALAR COM FREELA</button>
+                    <div>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                    </div>
+                </div>
+            </div>
+        
+        
+        
+            <div class="cards-freelas">
+                <div class="freela-info">
+                    <img  class="img-freela" src="https://img.freepik.com/fotos-gratis/tiro-na-cabeca-carismatico-agradavel-amigavel-mulher-europeia-curto-corte-de-cabelo-castanho-sorrindo-positivo-sentimento-feliz-otimista-curtindo-vidas-casualmente-conversando-amigos-divertido-alegre-em-pe-fundo-branco_176420-34680.jpg?size=626&ext=jpg&ga=GA1.1.1290207729.1680617905&semt=sph"  alt="">
+                    <div class="info">
+                        <div class="info-1">
+                            <p class="freela-name">Luisa Melo</p>
+                            <p class="freela-idade">33 anos</p>
+                        </div>
+                        <div class="freela-habilidade">Limpeza</div>
+                    </div>
+                </div>
+                <div class="contato-aval">
+                    <button class="falar-freela">FALAR COM FREELA</button>
+                    <div>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                    </div>
+                </div>
+            </div>
+        
+        
+        
+            <div class="cards-freelas">
+                <div class="freela-info">
+                    <img  class="img-freela" src="https://img.freepik.com/fotos-gratis/jovem-barbudo-com-camisa-listrada_273609-5677.jpg?size=626&ext=jpg&ga=GA1.1.1290207729.1680617905&semt=sph"  alt="">
+                    <div class="info">
+                        <div class="info-1">
+                            <p class="freela-name">Yuri Lucas</p>
+                            <p class="freela-idade">19 anos</p>
+                        </div>
+                        <div class="freela-habilidade">Carpintaria</div>
+                    </div>
+                </div>
+                <div class="contato-aval">
+                    <button class="falar-freela">FALAR COM FREELA</button>
+                    <div>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                    </div>
+                </div>
+            </div>
+       
+        
+        
+        
+            <div class="cards-freelas">
+                <div class="freela-info">
+                    <img  class="img-freela" src="https://img.freepik.com/fotos-gratis/homem-cacheado-com-sorriso-largo-mostra-dentes-perfeitos-se-diverte-com-uma-conversa-interessante-tem-cabelos-escuros-e-crespos-e-crespos-contra-uma-parede-branca_273609-17092.jpg?size=626&ext=jpg&ga=GA1.1.1290207729.1680617905&semt=sph"  alt="">
+                    <div class="info">
+                        <div class="info-1">
+                            <p class="freela-name">PEdro Henrique</p>
+                            <p class="freela-idade">20 anos</p>
+                        </div>
+                        <div class="freela-habilidade">Cozinha</div>
+                    </div>
+                </div>
+                <div class="contato-aval">
+                    <button class="falar-freela">FALAR COM FREELA</button>
+                    <div>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                    </div>
+                </div>
+            </div>
+        
+        
+        
+        
+            <div class="cards-freelas">
+                <div class="freela-info">
+                    <img  class="img-freela" src="https://img.freepik.com/fotos-gratis/mulher-de-cabelo-preto-bonita-alegre-em-pe-no-parque-da-cidade-e-sorrindo-senhora-aproveitando-o-tempo-de-lazer-ao-ar-livre-no-verao-close-vista-frontal-conceito-de-retrato-feminino_74855-12894.jpg?size=626&ext=jpg&ga=GA1.1.1290207729.1680617905&semt=sph"  alt="">
+                    <div class="info">
+                        <div class="info-1">
+                            <p class="freela-name">Maria Eduarda</p>
+                            <p class="freela-idade">37 anos</p>
+                        </div>
+                        <div class="freela-habilidade">Eventos</div>
+                    </div>
+                </div>
+                <div class="contato-aval">
+                    <button class="falar-freela">FALAR COM FREELA</button>
+                    <div>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                    </div>
+                </div>
+            </div>
+        
+        
+        
+        
+            <div class="cards-freelas">
+                <div class="freela-info">
+                    <img  class="img-freela" src="https://img.freepik.com/fotos-gratis/retrato-de-um-homem-idoso-britanico_53876-153506.jpg?size=626&ext=jpg&ga=GA1.1.1290207729.1680617905&semt=ais"  alt="">
+                    <div class="info">
+                        <div class="info-1">
+                            <p class="freela-name">Renato Veiga</p>
+                            <p class="freela-idade">53 anos</p>
+                        </div>
+                        <div class="freela-habilidade">Elétrica</div>
+                    </div>
+                </div>
+                <div class="contato-aval">
+                    <button class="falar-freela">FALAR COM FREELA</button>
+                    <div>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    <footer class="rodape">
+        <div class="rod1">
+            <p style="filter: drop-shadow(3px 5px 4px rgb(145, 0, 213)); font-weight: bold; font-size: 20px;">SOCIAL</p>
+            <div class="social">
+                <a href="#"><i class="fab fa-instagram" id="social"></i></a>
+                <a href="#"><i class="fab fa-facebook-f" id="social"></i></a>
+                <a href="#"><i class="fab fa-whatsapp" id="social"></i></a>
+                <a href="#"><i class="fab fa-twitter" id="social"></i></a>
+            </div>
+        </div>
+        <div class="rod2">
+            <p>Termos e Condições</p>
+            <p>Sobre nós</p>
+            <p>Parceiros</p>
+        </div>
+        <div class="rod3">
+            <p style="filter: drop-shadow(3px 5px 4px rgb(145, 0, 213)); font-weight: bold; font-size: 20px;">CONTATO
+            </p>
+            <div class="contact">
+                <p>meetjobs@gmail.com</p>
+                <p>+55 (31) 99999-9999</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Função para exibir informações dos freelancers na tela
+        function exibirFreelancersNaTela() {
+            // Obtenha a lista de freelancers do localStorage
+            const freelancers = JSON.parse(localStorage.getItem('freelancers')) || [];
+    
+            // Verifique se existem freelancers
+            if (freelancers.length > 0) {
+                // Supondo que você tenha um elemento com o ID "lista-freelancers" para exibir as informações
+                const listaFreelancers = document.getElementById('lista-freelancers');
+
+    
+                // Itere sobre a lista de freelancers e adicione as informações à tela
+                freelancers.forEach((freelancer, index) => {
+                    listaFreelancers.innerHTML += `
+                    <div class="cards-freelas">
+                <div class="freela-info">
+                    <img  class="img-freela" src="https://t4.ftcdn.net/jpg/02/23/50/73/360_F_223507349_F5RFU3kL6eMt5LijOaMbWLeHUTv165CB.jpg"  alt="">
+                    <div class="info">
+                        <div class="info-1">
+                            <p class="freela-name">${freelancer.nomeCompleto}</p>
+                            <p class="freela-idade">${freelancer.dataNascimento}</p>
+                        </div>
+                        <div class="freela-habilidade">${freelancer.competencias}</div>
+                    </div>
+                </div>
+                <div class="contato-aval">
+                    <button class="falar-freela">FALAR COM FREELA</button>
+                    <div>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                        <span>&#11088;</span>
+                    </div>
+                </div>
+            </div>
+                    `;
+                });
+            } else {
+                // Se não houver freelancers, exiba uma mensagem
+                console.log('Nenhum freelancer cadastrado.');
+            }
+        }
+    
+        // Chame a função ao carregar a página para exibir as informações, se houver
+        exibirFreelancersNaTela();
+    </script>
+    
+</body>
+
+</html>

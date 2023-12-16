@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="/script.js"></script>
+    <link rel="stylesheet" href="style.css" class="style">
+    <link rel="shortcut icon" href=".\assets\logo.png" type="image/x-icon">
+    <title>Feed de Vagas</title>
+</head>
+
+<body>
+    <div class="faixa"></div>
+    <header>
+        <div class="header-feed-vagas">
+            <div class="titulo-header">
+                <a href="/index.html"><img src=".\assets\logo.png" alt=""></a>
+                <h4>VAGAS DISPONÍVEIS</h4>
+
+            </div>
+            <div class="perfil-icon" id="agora">
+                <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                    <circle cx="26" cy="26" r="24.5" fill="white" stroke="#2F1854" stroke-width="3" />
+                    <path
+                        d="M26.4126 24.7619C30.2889 24.7619 33.4285 21.6223 33.4285 17.746C33.4285 13.8698 30.2889 10.7302 26.4126 10.7302C22.5363 10.7302 19.3967 13.8698 19.3967 17.746C19.3967 21.6223 22.5363 24.7619 26.4126 24.7619ZM26.4126 28.2698C21.7295 28.2698 12.3809 30.6202 12.3809 35.2857V38.7937H40.4444V35.2857C40.4444 30.6202 31.0957 28.2698 26.4126 28.2698Z"
+                        fill="#2F1854" />
+                </svg>
+                <h3 class="agora">FREELANCER</h3>
+            </div>
+        </div>
+        <hr />
+    </header>
+    <div class="feed_vagas">
+        <div class="filtro-vagas">
+            <h3 style="text-align: center;">Filtro</h3>
+            <div class="habilidades-filter">
+                <p class="filter-title">HABILIDADES</p>
+                <select name="habilidades" id="habilidades-filter">
+                    <option>Habilidades e Competências</option>
+                    <option value="Mecânica">Mecânica</option>
+                    <option value="Cozinha">Cozinha</option>
+                    <option value="Limpeza">Limpeza</option>
+                    <option value="Elétrica">Elétrica</option>
+                    <option value="Eventos">Eventos</option>
+                    <option value="Carpintaria">Carpintaria</option>
+                    <option value="Garçom">Garçom</option>
+                </select>
+            </div>
+            <div class="filter-localizacao">
+                <p class="filter-title">LOCALIZAÇÃO</p>
+                <input type="text" placeholder="Digite a cidade">
+            </div>
+            <div class="filter-valor">
+                <p class="filter-title">VALOR DE PROPOSTA</p>
+                <input type="text" placeholder="Digite o valor máx..">
+            </div>
+        </div>
+
+        <div class="feed-freelancers-container" id="vagas-list">
+            <!-- First Card - Bartender -->
+            <div class="cards-freelas">
+                <div class="freela-info">
+                    <div class="info">
+                        <div class="info-1">
+                            <p class="freela-name">BARTENDER</p>
+                            <p class="freela-idade">Precisamos de um(a) bartender para animar a nossa festa de aniversário! Queremos alguém criativo e habilidoso para preparar deliciosos drinks e garantir que todos os nossos convidados tenham uma experiência incrível.</p>
+                            <p class="p-color">R$200,00 - R$300,00</p>
+                        </div>
+                        <div class="freela-habilidade">BARTENDER</div>
+                    </div>
+                </div>
+                <div class="contato-aval">
+                    <button class="falar-freela">FAZER UMA PROPOSTA</button>
+                    
+                </div>
+            </div>
+        
+            <!-- Second Card - Limpeza -->
+            <div class="cards-freelas">
+                <div class="freela-info">
+                    <div class="info">
+                        <div class="info-1">
+                            <p class="freela-name">LIMPEZA</p>
+                            <p class="freela-idade">Estamos buscando um profissional de limpeza dedicado e confiável para realizar serviços de limpeza em nossa residência. É necessário ter experiência e atenção aos detalhes para garantir um ambiente limpo e organizado.</p>
+                            <p class="p-color">R$150,00 - R$300,00</p>
+                        </div>
+                        <div class="freela-habilidade">Limpeza</div>
+                    </div>
+                </div>
+                <div class="contato-aval">
+                    <button class="falar-freela">FAZER UMA PROPOSTA</button>
+                    
+                </div>
+            </div>
+        
+            <!-- Third Card - Eventos -->
+            <div class="cards-freelas">
+                <div class="freela-info">
+                    <div class="info">
+                        <div class="info-1">
+                            <p class="freela-name">EVENTOS</p>
+                            <p class="freela-idade">Procuramos um freelancer especializado em eventos para nos ajudar a organizar e coordenar um evento especial. É necessário ter experiência na gestão de eventos, desde o planejamento até a execução, garantindo que tudo ocorra sem problemas.</p>
+                            <p class="p-color">R$450,00 - R$600,00</p>
+                        </div>
+                        <div class="freela-habilidade">Eventos</div>
+                    </div>
+                </div>
+                <div class="contato-aval">
+                    <button class="falar-freela">FAZER UMA PROPOSTA</button>
+                    
+                </div>
+            </div>
+        
+            <!-- Fourth Card - Carpintaria -->
+            <div class="cards-freelas">
+                <div class="freela-info">
+                    <div class="info">
+                        <div class="info-1">
+                            <p class="freela-name">CARPINTARIA</p>
+                            <p class="freela-idade">Estamos em busca de um carpinteiro habilidoso para trabalhar em projetos de carpintaria personalizados. O candidato ideal deve ter experiência em trabalhos de marcenaria, habilidades técnicas e atenção aos detalhes.</p>
+                            <p class="p-color">R$90,00 - R$170,00</p>
+                        </div>
+                        <div class="freela-habilidade">Carpintaria</div>
+                    </div>
+                </div>
+                <div class="contato-aval">
+                    <button class="falar-freela">FAZER UMA PROPOSTA</button>
+                    
+                </div>
+            </div>
+        
+            <!-- Fifth Card - Elétrica -->
+            <div class="cards-freelas">
+                <div class="freela-info">
+                    <div class="info">
+                        <div class="info-1">
+                            <p class="freela-name">ELÉTRICA</p>
+                            <p class="freela-idade">Precisamos de um profissional de elétrica para realizar instalações e manutenções elétricas em nossa propriedade. É necessário ter conhecimento técnico em sistemas elétricos e garantir a segurança em todas as operações.</p>
+                            <p class="p-color">R$180,00 - R$220,00</p>
+                        </div>
+                        <div class="freela-habilidade">Elétrica</div>
+                    </div>
+                </div>
+                <div class="contato-aval">
+                    <button class="falar-freela">FAZER UMA PROPOSTA</button>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+        
+    <!-- CARD QUE VAI APARECER DE FORMA DINAMICA -->
+    
+    <footer class="rodape">
+        <div class="rod1">
+            <p style="filter: drop-shadow(3px 5px 4px rgb(145, 0, 213)); font-weight: bold; font-size: 20px;">SOCIAL</p>
+            <div class="social">
+                <a href="#"><i class="fab fa-instagram" id="social"></i></a>
+                <a href="#"><i class="fab fa-facebook-f" id="social"></i></a>
+                <a href="#"><i class="fab fa-whatsapp" id="social"></i></a>
+                <a href="#"><i class="fab fa-twitter" id="social"></i></a>
+            </div>
+        </div>
+        <div class="rod2">
+            <p>Termos e Condições</p>
+            <p>Sobre nós</p>
+            <p>Parceiros</p>
+        </div>
+        <div class="rod3">
+            <p style="filter: drop-shadow(3px 5px 4px rgb(145, 0, 213)); font-weight: bold; font-size: 20px;">CONTATO
+            </p>
+            <div class="contact">
+                <p>meetjobs@gmail.com</p>
+                <p>+55 (31) 99999-9999</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Recupera os dados do localStorage
+        var storedJobs = JSON.parse(localStorage.getItem('vagas')) || [];
+
+        // Seleciona o elemento onde serão exibidas as informações
+        var vagasListElement = document.getElementById('vagas-list');
+
+        // Exibe as informações das vagas na página
+        storedJobs.forEach(function(jobData) {
+            var jobElement = document.createElement('div');
+            jobElement.innerHTML = `
+            <div class="cards-freelas">
+                <div class="freela-info">
+                    <div class="info">
+                        <div class="info-1">
+                            <p class="freela-name">${jobData.title}</p>
+                            <p class="freela-idade">${jobData.description}</p>
+                            <p class="p-color">${jobData.salary}</p>
+                        </div>
+                        <div class="freela-habilidade">${jobData.skills}</div>
+                    </div>
+                </div>
+                <div class="contato-aval">
+                    <button class="falar-freela">FAZER UMA PROPOSTA</button>   
+                </div>
+            </div>`;
+            vagasListElement.appendChild(jobElement);
+        });
+    </script>
+
+</body>
+
+</html>
